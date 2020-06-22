@@ -68,7 +68,7 @@ function CountryProfile (props, ) {
         let apiData = []
         let countryProfileData = {}
 
-        const result = await axios('/files');
+        const result = await axios('/api/files');
         apiData =  result.data.data;
         apiData.forEach(function(d){
         if(d.page === "Country Profile" && d.section === 'Country data'){
