@@ -145,7 +145,7 @@ function CountryProfile (props, ) {
             let demographicsData = {}
             let parsedDemoData = []
 
-            const result = await axios(API_BASE+'/files');
+            const result = await axios('/api/files');
             apiData =  result.data.data;
             
             apiData.forEach(function(d){
