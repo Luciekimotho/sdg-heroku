@@ -60,7 +60,7 @@ if(!db){
 app.use(express.static(CLIENT_BUILD_PATH));
 app.use('/api', apiRoutes);
 
-app.get('/api/files', withAuth, function(req, res){
+app.get('/api/files', function(req, res){
    res.sendStatus(200);
 });
 
