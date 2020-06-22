@@ -22,7 +22,7 @@ function Login(){
     function handleSubmit(event) {
         event.preventDefault();
 
-        fetch(API_BASE + '/user/authenticate', {
+        fetch('api/user/authenticate', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {
