@@ -155,7 +155,7 @@ function Dashboard (){
     const fetchDashboardData = async() =>{
       setLoading(true)
       let apiData = []
-      const result = await axios(API_BASE+'/files');
+      const result = await axios('/files');
       apiData =  result.data.data;
       apiData.forEach(function(d){
         if(d.page === "Dashboard" && d.year === year){

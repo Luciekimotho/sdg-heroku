@@ -42,7 +42,7 @@ function DataUpload(){
 
     const handleDownload = (e) =>{
         const id = e.currentTarget.value;
-        axios.get(API_BASE + "/file/"+ id)
+        axios.get("/file/"+ id)
             .then(res => {
                 const csvFile = (res.data.title).replace(/ /g, "");
                 setCsvFileName(csvFile);
@@ -102,7 +102,7 @@ function DataUpload(){
 
     const submitForm = (contentType, data, setResponse) =>{
         axios({
-                url: `${API_BASE}/files`,
+                url: '/files',
                 method: 'POST',
                 data: data,
                 headers: { 'Content-Type': contentType },
@@ -121,7 +121,7 @@ function DataUpload(){
 
     useEffect(() => {
         const fetchData = async() =>{
-            const result = await axios(API_BASE+'/files');
+            const result = await axios('/files');
             const apiData = result.data.data;
             apiData.sort(function(a, b){return a.createdAt - b.createdAt});
             setFiles(result.data.data);
