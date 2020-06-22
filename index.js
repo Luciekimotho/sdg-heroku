@@ -47,7 +47,7 @@ const dbConnectionURL = {
 };
 
 //mongoose.connect(dbConnectionURL.LOCALURL, options);
-mongoose.connect(dbConnectionURL.LOCALURL || 'mongodb://heroku_p1d2r44m:2hre81jm5rg9oc0gejfbmfm5pg@ds149998.mlab.com:49998/heroku_p1d2r44m', options);
+mongoose.connect( 'mongodb://heroku_p1d2r44m:2hre81jm5rg9oc0gejfbmfm5pg@ds149998.mlab.com:49998/heroku_p1d2r44m', options);
 let db = mongoose.connection;
 
 if(!db){
